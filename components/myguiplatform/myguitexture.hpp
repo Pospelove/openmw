@@ -42,6 +42,9 @@ namespace osgMyGUI
         virtual void createManual(int width, int height, MyGUI::TextureUsage usage, MyGUI::PixelFormat format);
         virtual void loadFromFile(const std::string &fname);
         virtual void saveToFile(const std::string &fname);
+        
+        // Latest version of MyGUI::ITexture adds setShader, overriding it if exist
+        void setShader(const std::string& _shaderName) { }
 
         virtual void destroy();
 
