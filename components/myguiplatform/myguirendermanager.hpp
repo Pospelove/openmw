@@ -104,6 +104,12 @@ public:
     /** @see IRenderTarget::getInfo */
     virtual const MyGUI::RenderTargetInfo& getInfo() { return mInfo; }
 
+    // Latest version of RenderManager adds registerShader, overriding it if exist
+    void registerShader(
+			const std::string& _shaderName,
+			const std::string& _vertexProgramFile,
+			const std::string& _fragmentProgramFile) { }
+
     bool checkTexture(MyGUI::ITexture* _texture);
 
 /*internal:*/
