@@ -318,8 +318,10 @@ endif()
 
 set(Boost_NO_BOOST_CMAKE ON)
 
+find_library(MYGUI_LIBRARIES NAMES MyGUIEngineStatic REQUIRED)
+find_path(MyGUI_INCLUDE_DIRS NAMES MyGUI.h REQUIRED)
+
 find_package(Boost REQUIRED COMPONENTS ${BOOST_COMPONENTS})
-find_package(MyGUI 3.2.2 REQUIRED)
 find_package(SDL2 2.0.9 REQUIRED)
 find_package(OpenAL REQUIRED)
 find_package(Bullet ${REQUIRED_BULLET_VERSION} REQUIRED COMPONENTS BulletCollision LinearMath)
